@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Momentum Gems+ - Sales Playbook</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet"/>
+<!-- Tailwind config (must be BEFORE the CDN script) -->
+<script>
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                petrol: "#3B6F72",
+                wine: "#371A1F",
+                champagne: "#F8F6F4",
+              },
+            },
+          },
+        },
+      };
+    </script>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Your custom styles -->
+<link href="./style.css" rel="stylesheet"/>
+</head>
+<body class="p-4 md:p-8">
+<header class="brand-bg-petrol text-white py-6 px-4 rounded-xl flex flex-col items-center justify-center mb-8">
+<h1 class="text-3xl font-bold mb-1" contenteditable="true" data-field="main-title">
+        MOMENTUM GEMS+
+      </h1>
+<span class="text-xl font-medium" contenteditable="true" data-field="sub-title">Sales Playbook Timeline</span>
+<p class="mt-4 text-xs font-light text-center">
+        Budget target: $750/mo · Working time: ~25 hrs/week (20 execution, 5
+        admin)
+      </p>
+</header>
+<main>
+<div class="flex items-center justify-center flex-wrap gap-2 mb-8 brand-bg-champagne p-2 rounded-xl" id="tabbar" role="tablist">
+<button class="tab-button" data-route="#/months" data-tab="months" role="tab">Months</button>
+<button class="tab-button" data-route="#/weeks" data-tab="weeks" role="tab">Weeks</button>
+<button class="tab-button" data-route="#/progress" data-tab="progress" role="tab">Progress</button>
+<button class="tab-button" data-route="#/ops/inventory" data-tab="ops" role="tab">Ops</button>
+</div>
+<!-- Strategy -->
+<section class="mb-8" id="strategy-framework">
+<h2 class="text-2xl font-semibold mb-4 text-center">OVERARCHING GOAL (MONTHS 1–3)</h2>
+<p class="text-center mb-6">
+          “Build the foundation for consistent sales by activating personal
+          networks, testing cold traffic, and showing proof of traction
+          (reviews, UGC, early repeat buyers).”
+        </p>
+<h2 class="text-2xl font-semibold mb-4 text-center">STRATEGY-TO-ACTION FRAMEWORK</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="card p-4 text-center border-b-4 border-lime-500">
+<h3 class="text-xl font-bold mb-2">REFERRALS &amp; NETWORK</h3>
+<p class="text-sm">Nurture existing relationships &amp; leads.</p>
+</div>
+<div class="card p-4 text-center border-b-4 border-blue-500">
+<h3 class="text-xl font-bold mb-2">NEW AUDIENCE (ORGANIC &amp; ADS)</h3>
+<p class="text-sm">Reach new, untapped markets (ads + scalable content).</p>
+</div>
+<div class="card p-4 text-center border-b-4 border-yellow-500">
+<h3 class="text-xl font-bold mb-2">COMMUNITY &amp; EVENTS</h3>
+<p class="text-sm">Engage in groups, partnerships, and in-person events.</p>
+</div>
+<div class="card p-4 text-center border-b-4 border-red-500">
+<h3 class="text-xl font-bold mb-2">TRUST &amp; CREDIBILITY</h3>
+<p class="text-sm">Collect &amp; showcase reviews, UGC, founder proof.</p>
+</div>
+<div class="card p-4 text-center border-b-4 border-purple-500">
+<h3 class="text-xl font-bold mb-2">PLATFORM</h3>
+<p class="text-sm">Ownable channels &amp; handles.</p>
+</div>
+<div class="card p-4 text-center border-b-4 border-gray-500">
+<h3 class="text-xl font-bold mb-2">OPS (INVENTORY &amp; SYSTEMS)</h3>
+<p class="text-sm">Stock, packaging, tracking, and dashboards.</p>
+</div>
+<div class="card p-4 text-center border-b-4 border-pink-500">
+<h3 class="text-xl font-bold mb-2">MARKETING</h3>
+<p class="text-sm">Content cadence, email, promos.</p>
+</div>
+</div>
+</section>
+<div id="content-area"></div>
+</main>
+<!-- ===== Save HTML snapshot (center bottom) ===== -->
+<div style="position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:9999; display: flex; gap: 8px;">
+<button class="px-3 py-2 border rounded bg-white shadow" id="mg-export-html-btn">Export HTML</button>
+<button class="px-3 py-2 border rounded bg-white shadow" id="mg-import-html-btn">Import HTML</button>
+</div>
+<!-- User-facing message container for import/export status -->
+<div id="status-message" style="position:fixed;left:50%;bottom:54px;transform:translateX(-50%);z-index:9999; display:none;">
+<div class="px-4 py-2 rounded-md shadow-sm text-sm" id="status-text"></div>
+</div>
+<!-- This script tag will hold the saved data. DO NOT EDIT. -->
+<script id="mg-seed" type="application/json">{}</script>
+<!-- App logic -->
+<script src="./script_patched.js"></script>
+<input accept="text/html" id="mg-import-file" style="display:none" type="file"/></body>
+</html>
