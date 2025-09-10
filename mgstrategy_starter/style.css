@@ -1,0 +1,99 @@
+:root {
+  --brand-champagne: #f8f6f4;
+  --brand-wine: #371a1f;
+  --brand-petrol: #3b6f72;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--brand-champagne);
+  color: var(--brand-wine);
+}
+
+h1, h2, h3 {
+  font-family: "Julius Sans One", serif;
+}
+
+.brand-bg-petrol { background: var(--brand-petrol); }
+.brand-text-petrol { color: var(--brand-petrol); }
+.brand-bg-champagne { background: var(--brand-champagne); }
+
+.card {
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+.card:hover { transform: scale(1.02); }
+
+.tab-button {
+  background: var(--brand-champagne);
+  color: var(--brand-petrol);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s;
+}
+.tab-button.active {
+  background: var(--brand-petrol);
+  color: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.kanban-column { min-width: 280px; }
+
+.drop-zone {
+  min-height: 50px;
+  background: #f0f4f8;
+  border-radius: 8px;
+  border: 2px dashed #cbd5e1;
+}
+.drop-zone.hovered { outline: 2px dashed #94a3b8; outline-offset: 4px; }
+
+.badge {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.5rem;
+}
+
+select { background: #fff; }
+
+.expanded-view {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Tiny link UI */
+.link-chip {
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+}
+.link-pop {
+  position: absolute;
+  right: 0.5rem;
+  top: 2.25rem;
+  z-index: 30;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  padding: 0.5rem;
+  width: 280px;
+  display: none;
+}
+.link-pop.show { display: block; }
+
+.icon-btn {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 1;
+}
+.icon-btn:hover { background: #f9fafb; }
